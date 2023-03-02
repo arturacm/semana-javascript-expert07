@@ -3,6 +3,7 @@ const { GestureDescription, Finger, FingerCurl } = window.fp;
 const ScrollDown = new GestureDescription("scroll-down"); // ✊️
 const ScrollUp = new GestureDescription("scroll-up"); // 🖐
 const ScissorsGesture = new GestureDescription("scissors"); // ✌️
+const RocknRollGesture = new GestureDescription("rock-n-roll"); // 🤘
 
 // Rock
 // -----------------------------------------------------------------------------
@@ -41,17 +42,30 @@ ScissorsGesture.addCurl(Finger.Ring, FingerCurl.HalfCurl, 0.9);
 ScissorsGesture.addCurl(Finger.Pinky, FingerCurl.FullCurl, 1.0);
 ScissorsGesture.addCurl(Finger.Pinky, FingerCurl.HalfCurl, 0.9);
 
+// Rock n Roll
+//------------------------------------------------------------------------------
+RocknRollGesture.addCurl(Finger.Index, FingerCurl.NoCurl, 1.0);
+
+RocknRollGesture.addCurl(Finger.Middle, FingerCurl.FullCurl, 1.0);
+RocknRollGesture.addCurl(Finger.Middle, FingerCurl.HalfCurl, 0.9);
+
+RocknRollGesture.addCurl(Finger.Ring, FingerCurl.FullCurl, 1.0);
+RocknRollGesture.addCurl(Finger.Ring, FingerCurl.HalfCurl, 0.9);
+
+RocknRollGesture.addCurl(Finger.Pinky, FingerCurl.NoCurl, 1.0);
 
 const knownGestures = [
     ScrollDown,
     ScrollUp,
-    ScissorsGesture
+    ScissorsGesture,
+    RocknRollGesture
 ]
 
 const gestureStrings = {
     'scroll-down': '✊️',
     'scroll-up': '🖐',
-    scissors: '✌️'
+    'rock-n-roll': '🤘',
+    scissors: '✌️',
 
 }
 export { knownGestures, gestureStrings };
