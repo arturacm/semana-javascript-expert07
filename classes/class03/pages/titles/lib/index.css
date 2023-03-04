@@ -27,7 +27,7 @@ body {
     position: fixed;
 
     /* fica à frente dos elementos */
-    z-index: 2;
+    z-index: 12;
 }
 
 h1,
